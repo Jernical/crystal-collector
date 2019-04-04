@@ -1,0 +1,57 @@
+body {
+	background-image: url("../images/background.jpg");
+}
+
+
+footer {
+    margin-left: 550px;
+    margin-top: 50px;
+}
+
+/* Fonts */
+h1, h2, h3 {
+    font-family: 'Kalam', cursive;
+    margin-top: -20px;
+}
+
+p {
+    font-family: 'Kalam', cursive;
+}
+
+.jumbotron {
+    background-color: #ffffff;
+    background-image:  url("../images/background.jpg")
+}
+
+.numberBox {
+	font-size: 100px;
+	margin: 0px;
+}
+
+/* images for buttons */
+.icons {
+	display: inline-block;
+  	max-width: 100px;
+  	max-height: 100px;
+  	width: auto;
+  	height: auto;
+  	margin:10px;
+}
+
+#wins, #losses {
+    margin-top: 50px;
+}
+
+#gameSection {
+    background: url("../images/background.jpg")
+}
+
+#scoreSection {
+    background: url("../images/background.jpg")
+}
+
+#button-1, #button-2, #button-3, #button-4 {
+    background: url(../images/background.jpg)
+} 
+
+
