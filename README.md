@@ -1,1 +1,1 @@
-# crystal-collector
+# Crystal Collector
