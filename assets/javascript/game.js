@@ -1,6 +1,19 @@
 $(document).ready(function() {
+	// ******* GLOBAL VARS *******
 
-	// ******* NUMBER ARRAYS *******
+	// random VARS
+	var randNumber;
+	var crystalNumbers = [];
+
+	var cry1;
+	var cry2;
+	var cry3;
+	var cry4;
+
+  	var totalScore = 0; // user's score
+
+	var wins = 0;
+	var losses = 0;
 
 	// random var array
 	var randNum = [];
@@ -19,34 +32,16 @@ $(document).ready(function() {
 
 	console.log(crystals);
 
-	// ******* GLOBAL VARS *******
-
-	// random VARS
-	var randNumber;
-	var crystalNumbers = [];
-
-	var c1;
-	var c2;
-	var c3;
-	var c4;
-
-  	var totalScore = 0; // user's score
-
-	var wins = 0;
-	var losses = 0;
-
-	// ******* FUNCTIONS *******
-
 	// pick a random number
 	function pickRandomNumber(arr) {
 
-		var x = arr[Math.floor(Math.random() * arr.length)];
-		randNumber = x;
+		var reset = arr[Math.floor(Math.random() * arr.length)];
+		randNumber = reset;
 		$("#randomNumber").html(randNumber);
 
-			console.log("random number: " + randNumber);
+			console.log("random number is: " + randNumber);
 
-	} // END of pickRandomNumber function
+	}
 
 	// pick random numbers for crystals
 
@@ -71,13 +66,13 @@ $(document).ready(function() {
 		$("#button-" + (i+1)).attr("value", arr[i]);
 		console.log(this);
 		}
-		c1 = arr[0];
-		c2 = arr[1];
-		c3 = arr[2];
-		c4 = arr[3];
-	} // END of crystalValues function
+			cry1 = arr[0];
+			cry2 = arr[1];
+			cry3 = arr[2];
+			cry4 = arr[3];
+	}
 
-	function gameReset(x) {
+	function gameReset(reset) {
 
 		crystalNumbers = []; // clears crystal number values
 
@@ -90,8 +85,8 @@ $(document).ready(function() {
 		totalScore = 0;
 		$("#totalNum").html(totalScore);
 
-		alert(x);
-	} // END of gameReset function
+		alert(reset);
+	}
 
 	// *** GAME SETTINGS AT START ***
 
@@ -103,25 +98,25 @@ $(document).ready(function() {
 
 		$("#button-1").on("click", function() {
 
-			totalScore += c1;
+			totalScore += cry1;
 			$("#totalNum").html(totalScore);
 		});
 
 		$("#button-2").on("click", function() {
 
-			totalScore += c2;
+			totalScore += cry2;
 			$("#totalNum").html(totalScore);
 		});
 
 		$("#button-3").on("click", function() {
 
-			totalScore += c3;
+			totalScore += cry3;
 			$("#totalNum").html(totalScore);
 		});
 
 		$("#button-4").on("click", function() {
 
-			totalScore += c4;
+			totalScore += cry4;
 			$("#totalNum").html(totalScore);
 		});
 
@@ -135,7 +130,7 @@ $(document).ready(function() {
 			$("#wins").html("Wins: " + wins);
 
 
-			setTimeout(function() {gameReset("YOU WIN!!")}, 200);
+			setTimeout(function() {gameReset("YOU WIN!!")}, 180);
 		}
 
 		else if (totalScore > randNumber){
@@ -144,7 +139,7 @@ $(document).ready(function() {
 			$("#totalNum").html(totalScore);
 			$("#losses").html("Losses: " + losses);
 
-			setTimeout(function() {gameReset("YOU LOSE")}, 200);
+			setTimeout(function() {gameReset("YOU LOSE")}, 180);
 		}
 	});
 
