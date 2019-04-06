@@ -30,7 +30,6 @@ $(document).ready(function() {
 			crystals.push(c);
 	}
 
-	console.log(crystals);
 
 	// pick a random number
 	function pickRandomNumber(arr) {
@@ -39,7 +38,6 @@ $(document).ready(function() {
 		randNumber = reset;
 		$("#randomNumber").html(randNumber);
 
-			console.log("random number is: " + randNumber);
 
 	}
 
@@ -53,8 +51,6 @@ $(document).ready(function() {
 
 				crystalNumbers.push(a);
 		}
-    // check which numbers have been picked
-		console.log("crystal numbers: " + crystalNumbers);
 
 	} // END of pickRandomCrystals function
 
@@ -64,7 +60,6 @@ $(document).ready(function() {
 		for (i = 0; i < arr.length; i++) {
 
 		$("#button-" + (i+1)).attr("value", arr[i]);
-		console.log(this);
 		}
 			cry1 = arr[0];
 			cry2 = arr[1];
@@ -125,7 +120,6 @@ $(document).ready(function() {
 		if (totalScore == randNumber) {
 
 			wins++;
-			console.log(totalScore);
 			$("#totalNum").html(totalScore);
 			$("#wins").html("Wins: " + wins);
 
